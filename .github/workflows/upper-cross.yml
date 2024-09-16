@@ -1,9 +1,9 @@
-name: upper-capture
+name: upper-cross
 
 on:
   push:
     paths:
-      - '.github/workflows/upper-capture.yml'
+      - '.github/workflows/upper-cross.yml'
       - 'upper/**'
   workflow_dispatch:
 
