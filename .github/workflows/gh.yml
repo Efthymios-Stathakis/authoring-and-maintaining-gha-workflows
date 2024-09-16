@@ -1,0 +1,22 @@
+name: gh
+
+on:
+  push:
+    paths:
+      - '.github/workflows/gh.yml'
+  workflow_dispatch:
+
+jobs:
+  cli:
+    name: Github command line
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          env
+          gh --version
+          gh auth status
+          gh repo list
+          gh issue list
+          gh workflow list
+          gh api /repos/:owner/:repo/actions/workflows
+          
