@@ -25,13 +25,13 @@ jobs:
             const issue = await github.rest.issues.get({
               owner, repo, issue_number,
             });
-            console.log(`comment id: ${comment.data.id}`)
             console.log(`issue: ${issue}`)
 
             // create comment thanking contributor
             const comment = await github.rest.issues.createComment({
               owner, repo, issue_number, body: `Thank you for your contribution!`,
             });
+            console.log(`comment id: ${comment.data.id}`)
             console.log(`comment: ${comment.data}`)
 
             // auto label
