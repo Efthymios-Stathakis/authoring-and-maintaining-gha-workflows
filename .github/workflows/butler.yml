@@ -11,8 +11,8 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'comment: ${{ github.event.comment.body }}'
       - run: echo '${{ toJson(github.event) }}'
+      - run: echo '${{ github.event.comment.body }}'
   chat:
     if: contains(github.event.comment.body, '/chat')
     runs-on: ubuntu-latest
