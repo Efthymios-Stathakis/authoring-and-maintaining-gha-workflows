@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: build-go-upper
-    runs-on: ubuntu-latest
+    runs-on: 
     steps:
       - run: pwd && ls -al
       - name: checkout code
